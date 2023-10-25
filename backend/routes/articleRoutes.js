@@ -27,7 +27,7 @@ router.get("/articles/:id", async (req, res) => {
 });
 
 //Create new article
-router.post("/articles", async (req, res) => {
+router.post("/articles", requireAuth, requireAdmin, async (req, res) => {
   try {
     const article = await Article.create(req.body);
     res.status(200).json(article);
@@ -38,7 +38,7 @@ router.post("/articles", async (req, res) => {
 });
 
 //Delete an article
-router.delete("/articles/:id", async (req, res) => {
+router.delete("/articles/:id", requireAuth, requireAdmin, async (req, res) => {
   try {
     const article = await Article.findByIdAndDelete(req.params.id);
     if (!article) {

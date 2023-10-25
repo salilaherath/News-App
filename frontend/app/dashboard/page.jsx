@@ -10,9 +10,12 @@ export default function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:4000/api/articles/${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `https://news-app-api-five.vercel.app//api/articles/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (res.ok) {
         // Remove the deleted article from the state
@@ -27,7 +30,9 @@ export default function Dashboard() {
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const res = await fetch("http://localhost:4000/api/articles");
+      const res = await fetch(
+        "https://news-app-api-five.vercel.app//api/articles"
+      );
       const json = await res.json();
       if (res.ok) {
         setArticles(json);

@@ -8,9 +8,17 @@ import authRoutes from "./routes/authRoutes.js";
 const app = express();
 app.use(express.json());
 
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     exposedHeaders: "x-auth-token",
+//     credentials: true,
+//   })
+// );
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://news-app-api-five.vercel.app/",
+    methods: ["POST", "GET"],
     exposedHeaders: "x-auth-token",
     credentials: true,
   })

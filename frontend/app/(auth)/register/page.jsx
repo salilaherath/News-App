@@ -12,16 +12,19 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-        next: {
-          revalidate: 0,
-        },
-      });
+      const response = await fetch(
+        "https://news-app-api-five.vercel.app//api/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+          next: {
+            revalidate: 0,
+          },
+        }
+      );
 
       if (response.ok) {
         router.push("/");

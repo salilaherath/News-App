@@ -8,7 +8,9 @@ export default function NewsCard() {
   const [articles, setArticles] = useState(null);
   useEffect(() => {
     const fetchArticles = async () => {
-      const res = await fetch("http://localhost:4000/api/articles");
+      const res = await fetch(
+        "https://news-app-api-five.vercel.app//api/articles"
+      );
       const json = await res.json();
       if (res.ok) {
         setArticles(json);

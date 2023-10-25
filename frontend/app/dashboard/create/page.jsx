@@ -18,13 +18,16 @@ export default function Create() {
     };
 
     try {
-      const response = await fetch("http://localhost:4000/api/articles", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://news-app-api-five.vercel.app//api/articles",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         console.log("Article created successfully");

@@ -48,7 +48,7 @@ router.post("/login", async (req, res) => {
 
   const token = jwt.sign(
     { _id: user._id, isAdmin: user.isAdmin },
-    process.env.SECRET_KEY
+    pEJWHQHHHIOUP845NJNB32R23JKF9HJKA
   );
   res.header("x-auth-token", token).json({
     _id: user._id,

@@ -10,7 +10,7 @@ const requireAuth = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.SECRET_KEY);
+    const decoded = jwt.verify(token, EJWHQHHHIOUP845NJNB32R23JKF9HJKA);
     req.user = decoded;
     next();
   } catch (ex) {

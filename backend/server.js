@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "https://news-app-ten-lovat.vercel.app",
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "DELETE", "PATCH"],
     exposedHeaders: "x-auth-token",
     credentials: true,
   })

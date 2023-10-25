@@ -53,7 +53,7 @@ export default function Dashboard() {
           <button className="btn-primary">Create New</button>
         </Link>
         {articles?.map((article) => (
-          <div className="card my-5">
+          <div key={article._id} className="card my-5">
             <h3>{article.title}</h3>
             <div className="flex items-start justify-center gap-4">
               <Image

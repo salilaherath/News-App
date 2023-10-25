@@ -17,7 +17,7 @@ app.use(express.json());
 // );
 app.use(
   cors({
-    origin: "https://news-app-ten-lovat.vercel.app/",
+    origin: "https://news-o64tjn6m0-salilaherath.vercel.app/",
     methods: ["POST", "GET"],
     exposedHeaders: "x-auth-token",
     credentials: true,

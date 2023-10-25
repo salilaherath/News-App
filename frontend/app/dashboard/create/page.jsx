@@ -19,7 +19,7 @@ export default function Create() {
 
     try {
       const response = await fetch(
-        "https://news-app-api-five.vercel.app//api/articles",
+        "https://news-app-api-five.vercel.app/api/articles",
         {
           method: "POST",
           headers: {

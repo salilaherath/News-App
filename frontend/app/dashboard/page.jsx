@@ -11,7 +11,7 @@ export default function Dashboard() {
   const handleDelete = async (id) => {
     try {
       const res = await fetch(
-        `https://news-app-api-five.vercel.app//api/articles/${id}`,
+        `https://news-app-api-five.vercel.app/api/articles/${id}`,
         {
           method: "DELETE",
         }
@@ -31,7 +31,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchArticles = async () => {
       const res = await fetch(
-        "https://news-app-api-five.vercel.app//api/articles"
+        "https://news-app-api-five.vercel.app/api/articles"
       );
       const json = await res.json();
       if (res.ok) {

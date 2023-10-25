@@ -13,7 +13,7 @@ export default function Register() {
 
     try {
       const response = await fetch(
-        "https://news-app-api-five.vercel.app//api/auth/register",
+        "https://news-app-api-five.vercel.app/api/auth/register",
         {
           method: "POST",
           headers: {

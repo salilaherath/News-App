@@ -13,7 +13,7 @@ export default function Login() {
 
     try {
       const response = await fetch(
-        "https://news-app-api-five.vercel.app//api/auth/login",
+        "https://news-app-api-five.vercel.app/api/auth/login",
         {
           method: "POST",
           headers: {

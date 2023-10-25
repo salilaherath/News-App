@@ -10,7 +10,7 @@ export default function NewsDetails({ params }) {
   useEffect(() => {
     const fetchArticle = async () => {
       const res = await fetch(
-        `https://news-app-api-five.vercel.app//api/articles/${id}`
+        `https://news-app-api-five.vercel.app/api/articles/${id}`
       );
       const json = await res.json();
       if (res.ok) {

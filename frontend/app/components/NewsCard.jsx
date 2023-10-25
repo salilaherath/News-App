@@ -9,7 +9,7 @@ export default function NewsCard() {
   useEffect(() => {
     const fetchArticles = async () => {
       const res = await fetch(
-        "https://news-app-api-five.vercel.app//api/articles"
+        "https://news-app-api-five.vercel.app/api/articles"
       );
       const json = await res.json();
       if (res.ok) {
